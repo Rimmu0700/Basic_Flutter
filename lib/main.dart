@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'RegisterPage.dart';
+import 'package:fuller_basic/RegisterPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,11 +28,12 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.cyanAccent,
         foregroundColor: Colors.grey,
         actions: [
-          TextButton(
-            onPressed: () { 
+          TextButton.icon(
+            onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
             },
-            child: const Text("Register", style: TextStyle(color: Colors.grey)),
+            icon: const Icon(Icons.person_add, color: Colors.grey),
+            label: const Text("Register", style: TextStyle(color: Colors.grey)),
           ),
         ],
       ),
@@ -48,7 +49,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-          
             Container(
               height: 200,
               width: 200,
@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
                 "Inside Container",
                 style: TextStyle(color: Colors.white, fontSize: 15),
               ),
-            ), 
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
@@ -68,8 +68,7 @@ class HomePage extends StatelessWidget {
                 Icon(Icons.star_half, color: Colors.yellow, size: 50),
                 Text('Bintang 2', style: TextStyle(fontSize: 20)),
               ],
-            ), 
-
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
@@ -77,17 +76,16 @@ class HomePage extends StatelessWidget {
                 Icon(Icons.settings, size: 40, color: Colors.green),
                 Icon(Icons.settings, size: 40, color: Colors.grey),
               ],
-            ), 
-
+            ),
             Container(
               padding: const EdgeInsets.all(16),
               color: Colors.greenAccent[50],
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text("Nested Column"),
-                  const SizedBox(height: 20),
-                  const Row(
+                children: const [
+                  Text("Nested Column"),
+                  SizedBox(height: 20),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Icon(Icons.coffee, size: 40, color: Colors.brown),
@@ -97,8 +95,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            ), 
-
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -111,8 +108,7 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 10),
                 const Text("From Da Internet", style: TextStyle(fontSize: 18)),
               ],
-            ), 
-
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -126,7 +122,7 @@ class HomePage extends StatelessWidget {
                     backgroundColor: Colors.purple,
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   ),
-                  child: const Text("Click Me!", style: TextStyle(color: Colors.white)), 
+                  child: const Text("Click Me!", style: TextStyle(color: Colors.white)),
                 ),
               ],
             ),
